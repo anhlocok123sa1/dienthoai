@@ -1,25 +1,17 @@
 ﻿<div id="gioithieu">
 	<h3>GIỚI THIỆU</h3>
 	<p>
-		&nbsp &nbsp &nbsp &nbsp Điện thoại Loc Le là 1 trong những cửa hàng điện thoại lâu
-		đời nhất tại Việt nam còn tồn tại tới thời điểm này, điều đó thể hiện sự khó khăn và khốc liệt của thị trường
-		bán lẻ điện thoại di động ở nước ta cũng như sự cố gắng nỗ lực vươn lên để phát triển.
+		&nbsp &nbsp &nbsp &nbsp Chào mừng bạn đến với trang web điện thoại LocLe - nguồn thông tin hàng đầu về công nghệ tại Đại học Công Nghệ Sài Gòn! Chúng tôi tự hào là nền tảng truyền thông độc đáo, nơi cung cấp những tin tức, đánh giá và thông tin chuyên sâu về các sản phẩm và xu hướng mới nhất trong lĩnh vực điện thoại di động.
 		<br><br>
-		&nbsp &nbsp &nbsp &nbsp Thời gian phục vụ khách hàng là từ 08h00 sáng đến 21h30 tất cả các ngày trong tuần và
-		24/7
+		&nbsp &nbsp &nbsp &nbsp Với đội ngũ biên tập viên tận tâm và có kiến thức sâu rộng về công nghệ, chúng tôi cam kết mang đến cho bạn những bài viết chất lượng và cập nhật, giúp bạn hiểu rõ hơn về thế giới công nghệ đang ngày càng phát triển. Chúng tôi không chỉ giới thiệu về những sản phẩm hàng đầu mà còn tập trung vào việc hướng dẫn sử dụng, chia sẻ các mẹo hay và đánh giá chân thực để bạn có thể đưa ra quyết định mua sắm thông minh nhất.
 		<br><br>
-		&nbsp &nbsp &nbsp &nbsp Tất cả các sản phẩm SMARTPHONE là thế mạnh chính và cung cấp ra thị trường được đảm bảo
-		100% nguyên hộp, trùng IMEI với phụ kiện nguyên SEAL.
-		Đây là điều rất ít hoặc có thể nói là không có cửa hàng bán lẻ nào có thể làm được ở VN theo cách duy trì.
+		&nbsp &nbsp &nbsp &nbsp Ngoài ra, trang web của chúng tôi còn là nơi để cộng đồng sinh viên và đam mê công nghệ tại Đại học Công Nghệ Sài Gòn kết nối, trao đổi thông tin và chia sẻ kinh nghiệm. Bạn sẽ được tham gia vào những thảo luận sôi nổi, sự kiện và cơ hội độc đáo để mở rộng mạng lưới kết nối trong cộng đồng.
 		<br><br>
-		&nbsp &nbsp &nbsp &nbsp Chúng tôi là cửa hàng lớn với uy tín đã được khảng định với tất cả các khách hàng cũng
-		như các nhà phân phối, đối tác trong nước.
-		Lộc Lê mobile cám ơn tất cả các khách hàng đã mua và ủng hộ chúng tôi trong suốt thời gian qua bằng lời cám ơn
-		chân thành nhất .
+		&nbsp &nbsp &nbsp &nbsp Hãy đồng hành cùng chúng tôi trên hành trình khám phá không ngừng của công nghệ di động. LocLe - nơi bạn tìm thấy sự thông tin đa chiều, độc đáo và thú vị!
 	</p>
-	<img src="img/dienthoaitiendat.jpg" width="400" height="600">
+	<img src="img/stu.jpg" width="500">
 	<p style="margin-bottom:10px; padding-left:60px;">Hình ảnh cửa hàng Điện Thoại Loc Le - 180 Cao Lo</p>
-	<h4>Hà Nội</h4>
+	<h4>TP Hồ Chí Minh</h4>
 
-	<p>Địa chỉ : Hoàng Mai - Hà Nội | Tel: 0972341193 </p>
+	<p>Địa chỉ : 180 Cao Lỗ, Quận 8  | Tel: 0794740393 </p>
 </div>

@@ -43,8 +43,11 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 					<div class="button">
 						<ul>
 							<li>
-								<h1><a href="index.php?content=chitietsp&idsp=<?php echo $rows['idsp'] ?>"
-										class="chitiet"><button>Chi tiết</button></a></h1>
+								<h1>
+									<a href="index.php?content=chitietsp&idsp=<?php echo $rows['idsp'] ?>" class="chitiet">
+									<button>Chi tiết</button>
+									</a>
+								</h1>
 							</li>
 							<li>
 								<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $rows['idsp'] ?>"><button>Cho vào

@@ -104,8 +104,8 @@ if (isset($_GET['content'])) {
 								</h3>
 							</div>
 						<?php } ?>
-						<a href="#"><img src="img/uploads/<?php echo $result['hinhanh']; ?>"></a>
-						<p><a href="#">
+						<a href="index.php?content=chitietsp&idsp=<?php echo $result['idsp'] ?>"><img src="img/uploads/<?php echo $result['hinhanh']; ?>"></a>
+						<p><a href="index.php?content=chitietsp&idsp=<?php echo $result['idsp'] ?>">
 								<?php echo $result['tensp']; ?>
 							</a></p>
 						<h4>
@@ -178,16 +178,17 @@ if (isset($_GET['content'])) {
 		<h2>ĐIỆN THOẠI BÁN CHẠY</h2>
 		<div class="sanphamcon">
 			<?php
-			$sql1 = "select * from sanpham inner join danhmuc on sanpham.madm = danhmuc.madm where dequi=1 order by daban  DESC limit 6 ";
-			$result1 = $dbh->query($sql1);
-			$rows2 = $stm->fetchAll(PDO::FETCH_OBJ);
+			$sql1 = "select * from sanpham inner join danhmuc on sanpham.madm = danhmuc.madm where dequi=1 order by daban DESC limit 6 ";
+			$result1 = $dbh->prepare($sql1);
+			$result1->execute();
+
+			// print_r($rows2);
 			?>
 			<?php
-			foreach ($rows2 as $row) { ?>
-
+			while ($row = $result1->fetch(PDO::FETCH_ASSOC)) { ?>
 				<div class="dienthoai">
 					<?php
-					if ($row->khuyenmai1 > 0) {
+					if ($row['khuyenmai1'] > 0) {
 						?>
 						<div class="moi">
 							<h3>-
@@ -195,26 +196,27 @@ if (isset($_GET['content'])) {
 							</h3>
 						</div>
 					<?php } ?>
-					<h1><a href="#"><img src="img/uploads/<?php echo $row->hinhanh; ?>"></a></h1>
-					<p><a href="#">
-							<?php echo $row->tensp; ?>
+					<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"><img src="img/uploads/<?php echo $row['hinhanh']; ?>"></a></h1>
+					<p><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
+							<?php echo $row['tensp']; ?>
 						</a></p>
 					<h4>Giá:
-						<?php echo number_format(($row['gia'] * ((100 - $row->khuyenmai1) / 100)), 0, ",", "."); ?>
+						<?php echo number_format(($row['gia'] * ((100 - $row['khuyenmai1']) / 100)), 0, ",", "."); ?>
 					</h4>
 					<div class="button">
 						<ul>
 							<li>
-								<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row->idsp ?>"
+								<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"
 										class="chitiet"><button>Chi tiết</button></a></h1>
 							</li>
 							<li>
-								<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row->idsp ?>"><button>Cho vào
-											giỏ</button></a></h5>
+								<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>"><button>Cho vào giỏ</button></a></h5>
 							</li>
 						</ul>
-					</div><!-- End .button-->
-				</div><!-- End .dienthoai-->
+					</div>
+					<!-- End .button-->
+				</div>
+				<!-- End .dienthoai-->
 			<?php } ?>
 
 		</div><!-- End .sanphamcon-->
@@ -227,37 +229,38 @@ if (isset($_GET['content'])) {
 	<div class="sanphamcon">
 		<?php
 		$sql1 = "select * from sanpham inner join danhmuc on sanpham.madm = danhmuc.madm where dequi=1 order by idsp  DESC limit 6 ";
-		$result1 = $dbh->query($sql1);
-		$rows2 = $stm->fetchAll(PDO::FETCH_OBJ);
+		$result1 = $dbh->prepare($sql1);
+		$result1->execute();
+		
 		?>
 		<?php
-		foreach ($rows2 as $row) { ?>
+		while($row = $result1->fetch(PDO::FETCH_ASSOC)) { ?>
 
 		<div class="dienthoai">
 			<?php
-			if ($row->khuyenmai1 > 0) {
+			if ($row['khuyenmai1'] > 0) {
 				?>
 			<div class="moi">
 				<h3>-
-					<?php echo $row->khuyenmai1 ?>%
+					<?php echo $row['khuyenmai1'] ?>%
 				</h3>
 			</div>
 			<?php } ?>
-			<h1><a href="#"><img src="img/uploads/<?php echo $row->hinhanh; ?>"></a></h1>
-			<p><a href="#">
+			<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"><img src="img/uploads/<?php echo $row['hinhanh']; ?>"></a></h1>
+			<p><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
 					<?php echo $row['tensp']; ?>
 				</a></p>
 			<h4>
-				<?php echo number_format(($row->gia * ((100 - $row->khuyenmai1) / 100)), 0, ",", "."); ?>
+				<?php echo number_format(($row['gia'] * ((100 - $row['khuyenmai1']) / 100)), 0, ",", "."); ?>
 			</h4>
 			<div class="button">
 				<ul>
 					<li>
-						<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row->idsp ?>"
+						<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"
 								class="chitiet"><button>Chi tiết</button></a></h1>
 					</li>
 					<li>
-						<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row->idsp ?>"><button>Cho vào
+						<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>"><button>Cho vào
 									giỏ</button></a></h5>
 					</li>
 				</ul>

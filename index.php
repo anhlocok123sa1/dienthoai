@@ -249,17 +249,16 @@ include("include/connect.php"); ?>
 						<ul>
 							<li><span id="tencongty">Công Ty TNHH ĐIỆN THOẠI LỘC LÊ</span></li> <br>
 
-							<li>Địa chỉ: Hoàng Mai - Hà Nội </li>
-							<li>Điện thoại: 0972341193 - Hotline: 0972341193</li>
-							<li>Email: dienthoaiabc1@gmail.com</li>
+							<li>Địa chỉ : 180 Cao Lỗ, Quận 8, TP Hồ Chí Minh </li>
+							<li>Điện thoại: 0794740393</li>
+							<li>Email: dh52001727@student.stu.edu.vn</li>
 						</ul>
 					</div><!-- End .noidung -->
 					<div id="thanhngang">
 						<img src="img/thanhngang-footer.png">
 					</div><!-- End .thanhngang -->
 					<div id="copyright">
-						<p>Sinh Viên : Vũ Văn Thông | Lớp : 63CCT03 | Gmail : Vuthong.chipit@gmail.com
-						<p>
+						<p>Sinh Viên : Lê Lâm Tấn Lộc | Lớp : D20_TH02 | Gmail : dh52001727@student.stu.edu.vn <p>
 					</div><!-- End .copyright -->
 				</div><!-- End .noidungfooter -->
 			</div><!-- End .bg-footer -->
