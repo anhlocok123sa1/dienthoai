@@ -11,8 +11,8 @@ while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 				<div class="zoom-small-image">
 					<a href='img/uploads/<?php echo $row['hinhanh'] ?>' width="300" height="300" class='cloud-zoom'
 						id='zoom1' rel="adjustX: 10, adjustY:-4">
-						<img src="img/uploads/<?php echo $row['hinhanh'] ?>" width="250" height="250" alt=''
-							title="Optional title display" />
+						<img src="img/uploads/<?php echo $row['hinhanh'] ?>" style="object-fit: cover;" width="250"
+							height="250" alt='' title="Optional title display" />
 					</a>
 				</div>
 				<div class="giasp">
@@ -33,7 +33,8 @@ while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 							?>
 						</li>
 						<form action="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>" method="post">
-							<li>Số lượng mua : <input type="text" name="soluongmua" size="1" value="1" /></li>
+							<li>Số lượng mua : <input type="number" name="soluongmua" onkeyup="maxLengthCheck(this)"
+									value="1" min="1" max="<?php echo $dem; ?>" /></li>
 							<li>
 								<?php
 								if ($dem <= 0)
@@ -60,15 +61,20 @@ while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 				</div>
 				<div id="tab2">
 					<div id="fb-root"></div>
-					<script>(function (d, s, id) {
+					<script>
+						(function (d, s, id) {
 							var js, fjs = d.getElementsByTagName(s)[0];
 							if (d.getElementById(id)) return;
 							js = d.createElement(s); js.id = id;
 							js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1";
 							fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
+						}(document, 'script', 'facebook-jssdk'));
+						function maxLengthCheck(object) {
+							if(object.value><?php echo $dem; ?>){object.value=<?php echo $dem; ?>}else if(object.value<0){object.value='0';}
+						}
+					</script>
 					<div class="fb-comments"
-						data-href="https://www.facebook.com/pages/%C4%90i%E1%BB%87n-tho%E1%BA%A1i-Th%C3%A0nh-%C4%90%E1%BA%A1t/609767402431528?ref=hl"
+						data-href=""
 						data-width="560" data-numposts="10" data-colorscheme="light"></div>
 				</div>
 			</div>

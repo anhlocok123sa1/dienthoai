@@ -104,7 +104,8 @@ if (isset($_GET['content'])) {
 								</h3>
 							</div>
 						<?php } ?>
-						<a href="index.php?content=chitietsp&idsp=<?php echo $result['idsp'] ?>"><img src="img/uploads/<?php echo $result['hinhanh']; ?>"></a>
+						<a href="index.php?content=chitietsp&idsp=<?php echo $result['idsp'] ?>"><img
+								src="img/uploads/<?php echo $result['hinhanh']; ?>"></a>
 						<p><a href="index.php?content=chitietsp&idsp=<?php echo $result['idsp'] ?>">
 								<?php echo $result['tensp']; ?>
 							</a></p>
@@ -192,25 +193,37 @@ if (isset($_GET['content'])) {
 						?>
 						<div class="moi">
 							<h3>-
-								<?php echo $row->khuyenmai1 ?>%
+								<?php echo $row['khuyenmai1'] ?>%
 							</h3>
 						</div>
 					<?php } ?>
-					<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"><img src="img/uploads/<?php echo $row['hinhanh']; ?>"></a></h1>
-					<p><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
+					<h1>
+						<a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
+							<img src="img/uploads/<?php echo $row['hinhanh']; ?>" style="object-fit: cover;" width="140" height="140">
+						</a>
+					</h1>
+					<p>
+						<a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
 							<?php echo $row['tensp']; ?>
-						</a></p>
+						</a>
+					</p>
 					<h4>Giá:
 						<?php echo number_format(($row['gia'] * ((100 - $row['khuyenmai1']) / 100)), 0, ",", "."); ?>
 					</h4>
 					<div class="button">
 						<ul>
 							<li>
-								<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"
-										class="chitiet"><button>Chi tiết</button></a></h1>
+								<h1>
+									<a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>" class="chitiet">
+										<button>Chi tiết</button>
+									</a>
+								</h1>
 							</li>
 							<li>
-								<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>"><button>Cho vào giỏ</button></a></h5>
+								<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>">
+										<button>Cho vào giỏ</button>
+									</a>
+								</h5>
 							</li>
 						</ul>
 					</div>
@@ -231,10 +244,10 @@ if (isset($_GET['content'])) {
 		$sql1 = "select * from sanpham inner join danhmuc on sanpham.madm = danhmuc.madm where dequi=1 order by idsp  DESC limit 6 ";
 		$result1 = $dbh->prepare($sql1);
 		$result1->execute();
-		
+
 		?>
 		<?php
-		while($row = $result1->fetch(PDO::FETCH_ASSOC)) { ?>
+		while ($row = $result1->fetch(PDO::FETCH_ASSOC)) { ?>
 
 		<div class="dienthoai">
 			<?php
@@ -246,22 +259,34 @@ if (isset($_GET['content'])) {
 				</h3>
 			</div>
 			<?php } ?>
-			<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"><img src="img/uploads/<?php echo $row['hinhanh']; ?>"></a></h1>
-			<p><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
+			<h1>
+				<a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
+					<img src="img/uploads/<?php echo $row['hinhanh']; ?>" style="object-fit: cover;" width="140" height="140">
+				</a>
+			</h1>
+			<p>
+				<a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>">
 					<?php echo $row['tensp']; ?>
-				</a></p>
+				</a>
+			</p>
 			<h4>
 				<?php echo number_format(($row['gia'] * ((100 - $row['khuyenmai1']) / 100)), 0, ",", "."); ?>
 			</h4>
 			<div class="button">
 				<ul>
 					<li>
-						<h1><a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>"
-								class="chitiet"><button>Chi tiết</button></a></h1>
+						<h1>
+							<a href="index.php?content=chitietsp&idsp=<?php echo $row['idsp'] ?>" class="chitiet">
+								<button>Chi tiết</button>
+							</a>
+						</h1>
 					</li>
 					<li>
-						<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>"><button>Cho vào
-									giỏ</button></a></h5>
+						<h5>
+							<a href="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>">
+								<button>Cho vào giỏ</button>
+							</a>
+						</h5>
 					</li>
 				</ul>
 			</div><!-- End .button-->

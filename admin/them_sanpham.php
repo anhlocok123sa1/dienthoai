@@ -37,7 +37,7 @@
 		$madm = $_POST['madm'];
 		//$insert="INSERT INTO sanpham VALUES('', '$ten_sanpham', '$file__name__', '$mau', '$chitiet', '$soluong','0', '$gia', '$khuyenmai1', '$khuyenmai2', '$madm', '$ngay','0')";
 		//$query=mysql_query($insert);
-		$sql = "INSERT INTO sanpham VALUES ('',:ten_sanpham, :file__name__, :mau, :chitiet, :soluong, '0', :gia, :khuyenmai1, :khuyenmai2, :madm, :ngay, '0')";
+		$sql = "INSERT INTO sanpham VALUES ('',:ten_sanpham, :file__name__, :mau, :chitiet, :soluong, '0', :gia, :khuyenmai1, :khuyenmai2, :madm, :ngay)";
 		$query = $dbh->prepare($sql);
 		$query->bindParam(':ten_sanpham', $ten_sanpham);
 		$query->bindParam(':file__name__', $file__name__);
@@ -49,8 +49,8 @@
 		$query->bindParam(':khuyenmai2', $khuyenmai2);
 		$query->bindParam(':madm', $madm);
 		$query->bindParam(':ngay', $ngay);
-		$query->execute();
-		if ($query->execute()) {
+		$result = $query->execute();
+		if ($result) {
 			echo "<p align = center>Thêm sản phẩm thành công!</p>";
 			echo '<meta http-equiv="refresh" content="1;url=admin.php?admin=themsp">';
 		} else {

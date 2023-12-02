@@ -33,7 +33,7 @@ while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 							</h3>
 						</div>
 					<?php } ?>
-					<a href="#"><img src="img/uploads/<?php echo $rows['hinhanh']; ?>"></a><br>
+					<a href="#"><img src="img/uploads/<?php echo $rows['hinhanh']; ?>" ></a><br>
 					<p><a href="#">
 							<?php echo $rows['tensp']; ?>
 						</a></p><br>
