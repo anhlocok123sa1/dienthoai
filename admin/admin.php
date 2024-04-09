@@ -1,5 +1,6 @@
 ﻿<?php
 session_start();
+
 if (!isset($_SESSION['username']) or ($_SESSION['phanquyen'] == 1)) {
 
 	header('location:login.php');

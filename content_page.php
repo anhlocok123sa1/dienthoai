@@ -119,8 +119,7 @@ if (isset($_GET['content'])) {
 											class="chitiet"><button>Chi tiết</button></a></h1>
 								</li>
 								<li>
-									<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $result['idsp'] ?>"><button>Cho
-												vào giỏ</button></a></h5>
+									<h5><a href="index.php?content=cart&action=add&idsp=<?php echo $result['idsp'] ?>"><button>Cho vào giỏ</button></a></h5>
 								</li>
 							</ul>
 						</div><!-- End .button-->

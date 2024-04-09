@@ -73,12 +73,15 @@ function namthangngay($ngaythangnam)//Date : France -> USA  [(00-00-0000)->(0000
 function taomadm($bang,$truongma,$kytudungdau='')
 {
 	require("dbcon.inc");
-	$sql="select * from $bang order by $truongma";
+	$sql="select * from :bang order by :truongma";
 	$tam=0;
 	$stt=0;
 	$len_kt=strlen($kytudungdau);
-	$result = mysql_query($sql,$link);
-	while($row=mysql_fetch_array($result))
+	$result = $dbh->prepare($sql);
+	$result->bindParam(":bang",$bang);
+	$result->bindParam(":truongma",$truongma);
+	$result->execute();
+	while($row=$result->fetch(PDO::FETCH_ASSOC))
 	{
 		$stt++;
 		$Ma[$stt]=$row["$truongma"];
@@ -113,7 +116,6 @@ function taomadm($bang,$truongma,$kytudungdau='')
 				else
 					$sau=$kytudungdau.'00001';
 			 return ($sau);
-		 mysql_close();
 }
 
 //********************************************************
@@ -122,12 +124,15 @@ function taomadm($bang,$truongma,$kytudungdau='')
 function identity_int($bang,$truongma)
 {
 	require("dbcon.inc");
-	$sql="select * from $bang order by $truongma";
+	$sql="select * from :bang order by :truongma";
 	$tam=0;
 	$stt=0;
 	$len_kt=strlen($kytudungdau);
-	$result = mysql_query($sql,$link);
-	while($row=mysql_fetch_array($result))
+	$result = $dbh->prepare($sql);
+	$result->bindParam(":bang",$bang);
+	$result->bindParam(":truongma",$truongma);
+	$result->execute();
+	while($row=$result->fetch(PDO::FETCH_ASSOC))
 	{
 		$stt++;
 		$Ma[$stt]=$row["$truongma"];
@@ -136,7 +141,6 @@ function identity_int($bang,$truongma)
 		  $tam1=$Ma[$stt-1];
 		  	if($tam1>$tam) $tam=$tam1;		
 	}
-	mysql_close();
 		 $tam++;
 			 return ($tam);
 		 
@@ -149,10 +153,13 @@ function identity_int($bang,$truongma)
 function taoma($bang,$truongma)
 {
 	require("dbcon.inc");
-	$sql="select * from $bang order by $truongma";
+	$sql="select * from :bang order by :truongma";
 	$tam=0;
-	$result = mysql_query($sql,$link);
-	while($row=mysql_fetch_array($result))
+	$result = $dbh->prepare($sql);
+	$result->bindParam(":bang",$bang);
+	$result->bindParam(":truongma",$truongma);
+	$result->execute();
+	while($row=$result->fetch(PDO::FETCH_ASSOC))
 	{
 		$Ma=$row["$truongma"];
 		if ($tam<$Ma)
@@ -162,7 +169,6 @@ function taoma($bang,$truongma)
 	}
 			$i=$tam+1;
 			 return ($i);
-		 mysql_close();
 }
 //********************************************************
 //[Creator]   : AnhPT
@@ -350,12 +356,17 @@ require("dbcon.inc");
 	if($value_ma2<>"")
 		$where___=" and $field_dieukien2='$value_ma2'";
 	
-$sql___="SELECT $field_ten FROM $table WHERE $field_ma='$value_ma' $where___";
+$sql___="SELECT :field_ten FROM :table WHERE :field_ma=':value_ma' :where___";
 //echo $sql___;
-$result______=mysql_query($sql___,$link);
-if(mysql_num_rows($result______)!=0)
+$result______=$dbh->prepare($sql___);
+$result______->bind_param(":field_ten",$field_ten);
+$result______->bind_param(":value_ma",$value_ma);
+$result______->bind_param(":field_ma",$field_ma);
+$result______->bind_param(":where___",$where___);
+$result______->execute();
+if($result______->rowCount()!=0)
 	{
-		while($row______=mysql_fetch_object($result______))	
+		while($row______=$result______->fetch(PDO::FETCH_OBJ))	
 		{	$ten=$row______->$field_ten; }
 		
 	}

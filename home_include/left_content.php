@@ -49,10 +49,10 @@
 	</div><!-- End .center -->
 </div><!-- End .phukien -->
 
-<div id="quangcao1">
+<!-- <div id="quangcao1">
 	<div class="center">
 		<a href="#"> <img src="img/quangcao.png" alt="quangcao" title="quangcao"> </a>
 
 		<a href="#"> <img src="img/quangcao2.png" alt="quangcao2" title="quangcao2"> </a>
-	</div><!-- End .center -->
-</div><!-- End .quangcao1 -->
+	</div>
+</div> -->

@@ -33,7 +33,7 @@ while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
 							?>
 						</li>
 						<form action="index.php?content=cart&action=add&idsp=<?php echo $row['idsp'] ?>" method="post">
-							<li>Số lượng mua : <input type="number" name="soluongmua" onkeyup="maxLengthCheck(this)"
+							<li>Số lượng mua : <input type="number" name="soluongmua" <?php if(!($dem > 0)) { echo "readonly";} ?> onkeyup="maxLengthCheck(this)"
 									value="1" min="1" max="<?php echo $dem; ?>" /></li>
 							<li>
 								<?php

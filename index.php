@@ -118,8 +118,8 @@ include("include/connect.php"); ?>
 	<script type="text/javascript">
 		$(document).ready(function () {
 			var buttons = {
-				previous: $('#lofslidecontent45 .lof-previous'),
-				next: $('#lofslidecontent45 .lof-next')
+				next: $('#lofslidecontent45 .lof-previous'),
+				previous: $('#lofslidecontent45 .lof-next')
 			};
 
 			$obj = $('#lofslidecontent45').lofJSidernews({
@@ -143,7 +143,9 @@ include("include/connect.php"); ?>
 	<div id="wapper">
 		<div id="header">
 			<div id="lg-header">
-				<h1><a href="index.php">logo</a></h1>
+				<h1>
+					<!-- <a href="index.php">logo</a> -->
+				</h1>
 			</div>
 			<!-- End .bg-lg-header -->
 			<div id="bg-header">
@@ -160,11 +162,11 @@ include("include/connect.php"); ?>
 				</div>
 				<div id="lof-main-outer">
 					<ul class="lof-main-wapper">
-						<li><img src="img/slide/slide1.png" width="1000" height="350"></li>
-						<li><img src="img/slide/slide.png" width="1000" height="350"></li>
-						<li><img src="img/slide/slide2.png" width="1000" height="350"></li>
-						<li><img src="img/slide/slide3.png" width="1000" height="350"></li>
-						<li><img src="img/slide/slide4.png" width="1000" height="350"></li>
+						<li><img src="img/slide/slide" width="1000" height="350"></li>
+						<li><img src="img/slide/slide1" width="1000" height="350"></li>
+						<li><img src="img/slide/slide2" width="1000" height="350"></li>
+						<li><img src="img/slide/slide3" width="1000" height="350"></li>
+						<li><img src="img/slide/slide4" width="1000" height="350"></li>
 					</ul>
 				</div>
 				<div class="lof-navigator-wapper">
@@ -172,11 +174,11 @@ include("include/connect.php"); ?>
 					<div onClick="return false" href="" class="lof-next">Next</div>
 					<div class="lof-navigator-outer">
 						<ul class="lof-navigator">
-							<li><img src="img/slide/slide1.png" width="70" height="25" /></li>
-							<li><img src="img/slide/slide.png" width="70" height="25" /></li>
-							<li><img src="img/slide/slide2.png" width="70" height="25" /></li>
-							<li><img src="img/slide/slide3.png" width="70" height="25" /></li>
-							<li><img src="img/slide/slide4.png" width="70" height="25" /></li>
+							<li><img src="img/slide/slide" width="70" height="25" /></li>
+							<li><img src="img/slide/slide1" width="70" height="25" /></li>
+							<li><img src="img/slide/slide2" width="70" height="25" /></li>
+							<li><img src="img/slide/slide3" width="70" height="25" /></li>
+							<li><img src="img/slide/slide4" width="70" height="25" /></li>
 						</ul>
 					</div>
 					<div onClick="return false" href="" class="lof-previous">Previous</div>
@@ -243,7 +245,9 @@ include("include/connect.php"); ?>
 			<div id="bg-footer">
 				<div id="noidungfooter">
 					<div id="lg-footer">
-						<h3><a href="index.php">logo</a></h3>
+						<h3>
+							<!-- <a href="index.php">logo</a> -->
+						</h3>
 					</div><!-- End .lg-footer -->
 					<div id="noidung">
 						<ul>

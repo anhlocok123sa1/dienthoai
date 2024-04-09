@@ -101,17 +101,17 @@
 </div><!-- End .center1-->
 </div><!-- End .timkiem-->
 
-<div id="yahoo">
+<!-- <div id="yahoo">
 	<div class="center1">
 		<h4>HOTLINE</h4>
 		<h2><a href="ymsgr:sendim?anhchanglangtu_yeubetocvang&amp;m=g&amp;t=14"><img src="img/imonline.png"></a></h2>
 		<p>0978164307</p>
 		<h2><a href="ymsgr:sendim?boydangyeu8188&amp;m=g&amp;t=14"><img src="img/imonline.png"></a></h2>
 		<p>0982612514</p>
-	</div><!-- End .center1-->
-</div><!-- End .yahoo -->
+	</div>
+</div> -->
 
-<div id="fb-root">
+<!-- <div id="fb-root">
 	<div class="center1">
 		<div id="fb-root"></div>
 		<script>(function (d, s, id) {
@@ -124,5 +124,5 @@
 		<div class="fb-like-box" data-href="https://www.facebook.com/dienthoaiabc" data-width="188"
 			data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false"
 			data-show-border="false"></div>
-	</div><!-- End .center1 -->
-</div><!-- End .facebook -->
+	</div>
+</div> -->

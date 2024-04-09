@@ -6,7 +6,7 @@ ul li {list-style:none;}
 #wapper {width:1000px; height:auto; margin:auto; background:white; border:1px solid #e6e6e6; -webkit-box-shadow: 0 1px 20px #767676; box-shadow:0 1px 20px #767676;-moz-box-shadow: 0 1px 20px #767676;}
 #header {width:100%; height:200px;}
 	#lg-header {width:104px; height:98px; float:left; padding-top:20px; padding-left:40px; }
-		#lg-header a{background:url(../img/logo-header.png) no-repeat; width:104px; height:98px; display:block; text-indent:-99999px; float:left;}
+		/* #lg-header a{background:url(../img/logo-header.png) no-repeat; width:104px; height:98px; display:block; text-indent:-99999px; float:left;} */
 	#bg-header {background:url(../img/bg-header.png) no-repeat; width:1000px; height:150px; margin:0 auto;}
 	#menu-header {width:100%; height:50px; background:url(../img/menu-header.png); }
 		#menu ul {width:100%; height:50px; padding-left:20px;}
@@ -112,7 +112,7 @@ ul li {list-style:none;}
 		#menu-footer ul li a:hover {color:white;}
 	#bg-footer {background:url(../img/bg-footer.png); width:1000px; float:left;}
 		#noidungfooter {width:800px; height:175px; color:white; padding-top:20px; float:left; padding-left:70px;}
-			#lg-footer h3 a {background:url(../img/logo-footer.png) no-repeat; display:block; width:104px; height:98px; text-indent:-99999px; float:left; padding-right:20px;}	
+			/* #lg-footer h3 a {background:url(../img/logo-footer.png) no-repeat; display:block; width:104px; height:98px; text-indent:-99999px; float:left; padding-right:20px;}	 */
 				#noidung {width:800px; height:100px;}
 				#noidung ul li{}
 				#noidung ul li #tencongty { font-size:14px; font-weight:bold; }
